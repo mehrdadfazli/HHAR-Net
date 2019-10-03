@@ -167,7 +167,7 @@ if __name__ == '__main__':
     dataset['NonStationary'] = np.logical_or(dataset['NonStationary'],dataset['label:BICYCLING'])*1
 
     
-    X_parent, y_parent, X_child, y_child = data_cleaner(feature_set_range, parent_labels, child_labels, dataset)
+    X_parent, y_parent, X_child, y_child = data_cleaner(dataset, feature_set_range, parent_labels, child_labels)
     
     ###########################################################################
     #-------------------------| Indoor vs Outdoor |---------------------------#
