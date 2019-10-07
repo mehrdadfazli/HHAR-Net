@@ -146,29 +146,29 @@ if __name__ == '__main__':
     
     for i in range(len(sensors_to_use)):
         feature_set_range += sensors_list[sensors_to_use[i]]
-#    f1_accuracy = {}
-#    BA_accuracy = {}
-#    accuracy = {}
+    f1_accuracy = {}
+    BA_accuracy = {}
+    accuracy = {}
     ##########################################################################
     #-----------------| Stationary vs NonStationary |------------------------#
     ##########################################################################
 
     #We don't have these labels so we add them by our own Based on the child labels defined
-    parent_labels = ['Stationary','NonStationary']
-    
-    child_labels = [['label:OR_standing','label:SITTING','label:LYING_DOWN'],\
-                    ['label:FIX_running','label:FIX_walking','label:BICYCLING']]
-    
-       
-    dataset['Stationary'] = np.logical_or(dataset['label:OR_standing'],dataset['label:SITTING'])
-    dataset['Stationary'] = np.logical_or(dataset['Stationary'],dataset['label:LYING_DOWN'])*1
-    
-    dataset['NonStationary'] = np.logical_or(dataset['label:FIX_running'],dataset['label:FIX_walking'])
-    dataset['NonStationary'] = np.logical_or(dataset['NonStationary'],dataset['label:BICYCLING'])*1
-
-    
-    X_parent, y_parent, X_child, y_child = data_cleaner(dataset, feature_set_range, parent_labels, child_labels)
-    
+#    parent_labels = ['Stationary','NonStationary']
+#    
+#    child_labels = [['label:OR_standing','label:SITTING','label:LYING_DOWN'],\
+#                    ['label:FIX_running','label:FIX_walking','label:BICYCLING']]
+#    
+#       
+#    dataset['Stationary'] = np.logical_or(dataset['label:OR_standing'],dataset['label:SITTING'])
+#    dataset['Stationary'] = np.logical_or(dataset['Stationary'],dataset['label:LYING_DOWN'])*1
+#    
+#    dataset['NonStationary'] = np.logical_or(dataset['label:FIX_running'],dataset['label:FIX_walking'])
+#    dataset['NonStationary'] = np.logical_or(dataset['NonStationary'],dataset['label:BICYCLING'])*1
+#
+#    
+#    X_parent, y_parent, X_child, y_child = data_cleaner(dataset, feature_set_range, parent_labels, child_labels)
+#    
     ###########################################################################
     #-------------------------| Indoor vs Outdoor |---------------------------#
     ###########################################################################
@@ -260,67 +260,36 @@ if __name__ == '__main__':
 #    ###########################################################################
 #    #-----------------------| DNN  w/o Hierarchy|-----------------------------#
 #    ###########################################################################
-#    
-##    X_parent_train, X_parent_test, y_parent_train, y_parent_test = \
-##    train_test_split(X_parent, y_parent, test_size=0.3)
-##    
-##    clf_parent = Sequential()
-##    clf_parent.add(Dense(1024, input_dim=len(feature_set_range), activation='relu'))
-##    clf_parent.add(Dense(512, activation='relu'))
-##    clf_parent.add(Dense(64, activation='relu'))
-##    clf_parent.add(Dense(1, activation='sigmoid'))
-##    
-##    clf_parent.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-##    
-##    clf_parent.fit(X_parent_train, y_parent_train, batch_size=100, \
-##                   validation_data=(X_parent_test, y_parent_test.values), \
-##                   epochs=10, class_weight='balanced')
-##    
-##    y_parent_pred = clf_parent.predict(X_parent_test)
-##    
-##    #confusion_matrix = confusion_matrix(y_parent_test.values, y_parent_pred.round)
-##    
-##    df_cm = pd.DataFrame(confusion_matrix, range(2),range(2))
-###    plt.figure(figsize = (10,7))
-##    sn.set(font_scale=1.4)#for label size
-##    sn.heatmap(df_cm, annot=True,annot_kws={"size": 16})# font size
-##    f1_score(y_parent_test.values, y_parent_pred.round(), average='macro')
-#    parent_labels = ['label:OR_standing','label:SITTING','label:LYING_DOWN',\
-#                     'label:FIX_running','label:FIX_walking','label:BICYCLING']
-#    
-#    feat = dataset.iloc[:,feature_set_range]
-#    response = dataset[parent_labels]
-#
-#    data_to_model = pd.concat([feat,response],axis=1)
-#    data_to_model = data_to_model.dropna()
-#           
-#    feature_set_range = range(83)
-#    X_parent, y_parent = data_cleaner(data_to_model, feature_set_range, parent_labels)
-#    
-#    X_train, X_test, y_train, y_test = train_test_split(X_parent, y_parent, test_size=0.3)
-#
-#    
-#    clf = Sequential()
-#    clf.add(Dense(512, input_dim=len(feature_set_range), activation='relu'))
-#    clf.add(Dense(128, activation='relu'))
-#    clf.add(Dense(6, activation='softmax'))
-#    
-#    clf.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-#    
-#    clf.fit(X_train, y_train, batch_size=100, validation_split=0.2, epochs=100, class_weight='balanced')
-#    
-#    y_pred = clf.predict_classes(X_test)
-#
-#    confusion_flat = confusion_matrix(y_test.values, y_pred)
-#    
-#    f1_accuracy['flat'] = f1_score(y_test.values, y_pred, average='macro')
-#    BA_accuracy['flat'] = balanced_accuracy_score(y_test.values, y_pred)
-#    accuracy['flat'] = accuracy_score(y_test.values, y_pred)
+    
+    parent_labels = ['label:OR_standing','label:SITTING','label:LYING_DOWN',\
+                    'label:FIX_running','label:FIX_walking','label:BICYCLING']
+
+    X_parent, y_parent = data_cleaner(dataset, feature_set_range, parent_labels)
+
+    X_train, X_test, y_train, y_test = train_test_split(X_parent, y_parent, test_size=0.3)
+
+    
+    clf = Sequential()
+    clf.add(Dense(512, input_dim=len(feature_set_range), activation='relu'))
+    clf.add(Dense(128, activation='relu'))
+    clf.add(Dense(6, activation='softmax'))
+    
+    clf.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    
+    clf.fit(X_train, y_train, batch_size=100, validation_split=0.2, epochs=100, class_weight='balanced')
+    
+    y_pred = clf.predict_classes(X_test)
+
+    confusion_flat = confusion_matrix(y_test.values, y_pred)
+    
+    f1_accuracy['flat'] = f1_score(y_test.values, y_pred, average='macro')
+    BA_accuracy['flat'] = balanced_accuracy_score(y_test.values, y_pred)
+    accuracy['flat'] = accuracy_score(y_test.values, y_pred)
 #    
 #    ###########################################################################
 #    #-----------------------| DNN  with Hierarchy|----------------------------#
 #    ###########################################################################
-#    #We don't have these labels so we add them by our own Based on the child labels defined
+    #We don't have these labels so we add them by our own Based on the child labels defined
 #    parent_labels = ['Stationary','NonStationary']
 #    
 #    child_labels = [['label:OR_standing','label:SITTING','label:LYING_DOWN'],\
