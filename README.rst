@@ -1,4 +1,4 @@
-|arxiv|   |gitter|  |researchgate|  |GitHublicense| |twitter|
+|arxiv|   |gitter|  |contributions-welcome|  |researchgate|  |GitHublicense| |twitter| |contributors| 
 
 Referenced paper : `HHAR-net: Hierarchical Human Activity Recognition using Neural Networks <https://arxiv.org/abs/2010.16052>`__
 
@@ -29,8 +29,11 @@ Citations:
     }
 
 
-
-
+.. |contributors| image:: https://img.shields.io/github/contributors/mehrdadfazli/Hierarchical-DNN-Activity-Recognition.svg
+      :target: https://github.com/mehrdadfazli/Hierarchical-DNN-Activity-Recognition/graphs/contributors 
+      
+.. |contributions-welcome| image:: https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat
+    :target: https://github.com/mehrdadfazli/Hierarchical-DNN-Activity-Recognition/pulls
 
 .. |researchgate| image:: https://img.shields.io/badge/ResearchGate-HHAR_net-blue.svg?style=flat
    :target: https://www.researchgate.net/publication/344934245_HHAR-net_Hierarchical_Human_Activity_Recognition_using_Neural_Networks
