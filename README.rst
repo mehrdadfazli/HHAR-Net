@@ -13,6 +13,41 @@ Activity recognition using built-in sensors in smart and wearable devices provid
 
 
 
+Hierarchical Classification
+===========================
+Hierarchical Classification algorithms employ stacks of machine learning architectures to provide specialized understanding at each level of the data hierarchy which have been used in many domains such as text and document classification, medical image classification, web content and sensor data. Human activity recognition is a multi-class (and in some cases multi-label) classification task. Examples of activities include sitting, walking, eating, watching TV, and bathing.
+
+
+
+.. image:: docs/pic/HHAR.PNG
+
+
+-----------------------------------------
+Deep Neural Networks
+-----------------------------------------
+
+Deep Neural Networks architectures are designed to learn through multiple connection of layers where each single layer only receives connection from previous and provides connections only to the next layer in hidden part. The input is a connection of feature space with first hidden layer. For Deep Neural Networks (DNN), input layer is from Sensors as shown in standard DNN in Figure. The output layer houses neurons equal to the number of classes for multi-class classification and only one neuron for binary classification. Our implementation of Deep Neural Network (DNN) is basically a discriminatively trained model that uses standard back-propagation algorithm and sigmoid or ReLU as activation functions. The output layer for multi-class classification should use Softmax.
+
+
+.. image:: docs/pic/DNN.png
+
+--------
+Dataset
+--------
+
+
+The Extrasensory dataset that is used in this work is a publicly available dataset collected by `Vaizman <https://arxiv.org/pdf/1609.06354.pdf>`__ at the University of California San Diego. This data was collected in the wild using smartphones and wearable devices. The users were asked to provide the ground truth label for their activities. 
+The dataset contains over 300k samples (one sample per minute) and 50 activity and context labels collected from 60 individuals. Each label has its binary column indicating whether that label was relevant or not. Data was collected from accelerometer, gyroscope, magnetometer, watch compass, location, audio, and phone state sensors. Both  featurized and raw data are provided in the dataset. Featurized data has a total of 225 features extracted from six main sensors. We used the featurized data in this work.
+
+
+-----------------------------------------
+Evaluation and Results
+-----------------------------------------
+
+.. image:: docs/pic/Results_CM.png
+
+
+
 ==========
 Citations:
 ==========
