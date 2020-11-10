@@ -29,11 +29,11 @@ Citations:
     }
 
 
-.. |contributors| image:: https://img.shields.io/github/contributors/mehrdadfazli/Hierarchical-DNN-Activity-Recognition.svg
-      :target: https://github.com/mehrdadfazli/Hierarchical-DNN-Activity-Recognition/graphs/contributors 
+.. |contributors| image:: https://img.shields.io/github/contributors/mehrdadfazli/HHAR-Net.svg
+      :target: https://github.com/mehrdadfazli/HHAR-Net/graphs/contributors 
       
 .. |contributions-welcome| image:: https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat
-    :target: https://github.com/mehrdadfazli/Hierarchical-DNN-Activity-Recognition/pulls
+    :target: https://github.com/mehrdadfazli/HHAR-Net/pulls
 
 .. |researchgate| image:: https://img.shields.io/badge/ResearchGate-HHAR_net-blue.svg?style=flat
    :target: https://www.researchgate.net/publication/344934245_HHAR-net_Hierarchical_Human_Activity_Recognition_using_Neural_Networks
@@ -43,7 +43,7 @@ Citations:
 .. |arxiv| image:: https://img.shields.io/badge/arXiv-2010.16052-red.svg
     :target: https://arxiv.org/abs/2010.16052
 .. |twitter| image:: https://img.shields.io/twitter/url/http/shields.io.svg?style=social
-    :target: https://twitter.com/intent/tweet?text=HHAR-net:%20Hierarchical%20Human%20Activity%20Recognition%20using%20Neural%20Networks%0aGitHub:&url=https://github.com/mehrdadfazli/Hierarchical-DNN-Activity-Recognition&hashtags=DeepLearning,ActivityRecognition,MachineLearning,deep_neural_networks,DataScience
+    :target: https://twitter.com/intent/tweet?text=HHAR-net:%20Hierarchical%20Human%20Activity%20Recognition%20using%20Neural%20Networks%0aGitHub:&url=https://github.com/mehrdadfazli/HHAR-Net&hashtags=DeepLearning,ActivityRecognition,MachineLearning,deep_neural_networks,DataScience
 
 .. |gitter| image:: https://badges.gitter.im/Join%20Chat.svg
    :target: https://gitter.im/HHAR-net/community
