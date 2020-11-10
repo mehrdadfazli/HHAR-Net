@@ -43,5 +43,5 @@ Citations:
     :target: https://twitter.com/intent/tweet?text=HHAR-net:%20Hierarchical%20Human%20Activity%20Recognition%20using%20Neural%20Networks%0aGitHub:&url=https://github.com/mehrdadfazli/Hierarchical-DNN-Activity-Recognition&hashtags=DeepLearning,ActivityRecognition,MachineLearning,deep_neural_networks,DataScience
 
 .. |gitter| image:: https://badges.gitter.im/Join%20Chat.svg
-   :target: https://gitter.im/HHAR-net/Lobby?source=orgpage
+   :target: https://gitter.im/HHAR-net/community
 .. |HHAR| image:: http://kowsari.net/onewebmedia/RMDL.jpg
