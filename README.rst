@@ -1,4 +1,4 @@
-|arxiv|   |gitter|  |contributions-welcome|  |researchgate|  |GitHublicense|  |contributors| |twitter|
+|arxiv|   |gitter| |mendeley| |contributions-welcome|  |researchgate|  |GitHublicense|  |contributors| |twitter|
 
 Referenced paper : `HHAR-net: Hierarchical Human Activity Recognition using Neural Networks <https://arxiv.org/abs/2010.16052>`__
 
@@ -47,3 +47,7 @@ Citations:
 
 .. |gitter| image:: https://badges.gitter.im/Join%20Chat.svg
    :target: https://gitter.im/HHAR-net/community
+
+.. |mendeley| image:: https://img.shields.io/badge/Mendeley-Add%20to%20Library-critical.svg
+    :target: https://www.mendeley.com/import/?url=https://arxiv.org/abs/2010.16052
+
