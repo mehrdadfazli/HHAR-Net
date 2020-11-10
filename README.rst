@@ -35,7 +35,7 @@ Citations:
 .. |researchgate| image:: https://img.shields.io/badge/ResearchGate-HHAR_net-blue.svg?style=flat
    :target: https://www.researchgate.net/publication/344934245_HHAR-net_Hierarchical_Human_Activity_Recognition_using_Neural_Networks
    
-.. |GitHublicense| image:: https://img.shields.io/badge/licence-GPL-blue.svg
+.. |GitHublicense| image:: https://img.shields.io/badge/licence-AGPL-blue.svg
    :target: ./LICENSE
 .. |arxiv| image:: https://img.shields.io/badge/arXiv-2010.16052-red.svg
     :target: https://arxiv.org/abs/2010.16052
@@ -44,4 +44,3 @@ Citations:
 
 .. |gitter| image:: https://badges.gitter.im/Join%20Chat.svg
    :target: https://gitter.im/HHAR-net/community
-.. |HHAR| image:: http://kowsari.net/onewebmedia/RMDL.jpg
