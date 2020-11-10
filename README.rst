@@ -44,7 +44,7 @@ The dataset contains over 300k samples (one sample per minute) and 50 activity a
 Evaluation and Results
 -----------------------------------------
 
-.. image:: docs/pic/Results_CM.png
+.. image:: docs/pic/Results_CM.PNG
 
 
 
