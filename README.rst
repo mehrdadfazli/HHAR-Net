@@ -1,4 +1,4 @@
-|arxiv|   |gitter|  |contributions-welcome|  |researchgate|  |GitHublicense| |twitter| |contributors| 
+|arxiv|   |gitter|  |contributions-welcome|  |researchgate|  |GitHublicense|  |contributors| |twitter|
 
 Referenced paper : `HHAR-net: Hierarchical Human Activity Recognition using Neural Networks <https://arxiv.org/abs/2010.16052>`__
 
