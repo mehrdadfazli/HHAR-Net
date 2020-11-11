@@ -1,3 +1,5 @@
+
+
 # -*- coding: utf-8 -*-
 """
 Created on Wed Oct  2 13:18:12 2019
@@ -169,4 +171,5 @@ def activities():
     activity['label:PHONE_IN_BAG'] = 273
     activity['label:PHONE_ON_TABLE'] = 274
     return(activity)
+
 
